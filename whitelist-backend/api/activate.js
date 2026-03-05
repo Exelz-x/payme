@@ -8,9 +8,7 @@ const { activateLicense } = require("../lib/db");
 // Produk yang terdaftar — tambahkan produk baru di sini
 // Format: "PRODUCT_ID" : { name, badgeId }
 const PRODUCTS = {
-  "PRODUCT_A": { name: "Awesome GUI Pack",    badgeId: 111111111 },
-  "PRODUCT_B": { name: "Admin System Pro",    badgeId: 222222222 },
-  "PRODUCT_C": { name: "Combat Framework",    badgeId: 333333333 },
+  "PRODUCT_A": { name: "Fireworks Show Bundles 2.393 Shots V2",    badgeId: 636438583652372 },
   // Tambahkan produkmu di sini...
 };
 
@@ -54,4 +52,5 @@ module.exports = async function handler(req, res) {
     console.error("[activate] Error:", err);
     return res.status(500).json({ success: false, reason: "SERVER_ERROR" });
   }
+
 };
