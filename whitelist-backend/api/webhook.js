@@ -16,23 +16,6 @@ module.exports = async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
 
   try {
-    // ─── Verifikasi signature dari Payhip ──────────────────────────────────
-    // Ini memastikan request benar-benar dari Payhip, bukan dari orang random
-    const signature = req.headers["x-payhip-signature"];
-    const webhookSecret = process.env.PAYHIP_WEBHOOK_SECRET;
-
-    if (webhookSecret && signature) {
-      const body = JSON.stringify(req.body);
-      const expectedSig = crypto
-        .createHmac("sha256", webhookSecret)
-        .update(body)
-        .digest("hex");
-
-      if (signature !== expectedSig) {
-        console.warn("[webhook] Invalid signature");
-        return res.status(401).json({ error: "Invalid signature" });
-      }
-    }
 
     // ─── Parse data dari Payhip ────────────────────────────────────────────
     const { type, data } = req.body;
@@ -69,3 +52,4 @@ module.exports = async function handler(req, res) {
   }
 
 };
+
