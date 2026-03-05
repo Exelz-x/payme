@@ -8,7 +8,7 @@ const { activateLicense } = require("../lib/db");
 // Produk yang terdaftar — tambahkan produk baru di sini
 // Format: "PRODUCT_ID" : { name, badgeId }
 const PRODUCTS = {
-  "PRODUCT_A": { name: "Fireworks Show Bundles 2.393 Shots V2",    badgeId: 636438583652372 },
+  "FIREWORKS_V2": { name: "Fireworks Show Bundles 2.393 Shots V2",    badgeId: 636438583652372 },
   // Tambahkan produkmu di sini...
 };
 
@@ -54,3 +54,4 @@ module.exports = async function handler(req, res) {
   }
 
 };
+
