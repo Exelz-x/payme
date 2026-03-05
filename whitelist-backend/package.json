@@ -1,0 +1,14 @@
+{
+  "name": "roblox-whitelist-backend",
+  "version": "2.0.0",
+  "description": "Whitelist system backend for Roblox products — using Supabase",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "crypto": "^1.0.1"
+  }
+}
