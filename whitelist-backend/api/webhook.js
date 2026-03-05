@@ -9,9 +9,7 @@ const { registerLicense } = require("../lib/db");
 // Map dari Payhip Product ID ke internal productId kamu
 // Cari Payhip Product ID di: Payhip Dashboard → klik produk → lihat URL (angka di URL)
 const PAYHIP_PRODUCT_MAP = {
-  "payhip_prod_abc123": "PRODUCT_A",   // Ganti dengan Product ID Payhip asli kamu
-  "payhip_prod_def456": "PRODUCT_B",
-  "payhip_prod_ghi789": "PRODUCT_C",
+  "RKiBx": "FIREWORKS_V2",
 };
 
 module.exports = async function handler(req, res) {
@@ -69,4 +67,5 @@ module.exports = async function handler(req, res) {
     console.error("[webhook] Error:", err);
     return res.status(500).json({ error: "Server error" });
   }
+
 };
